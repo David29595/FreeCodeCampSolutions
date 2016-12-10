@@ -2,6 +2,7 @@
  * Return an English translated sentence of the passed binary string.
  * The binary string will be space separated.
  */
+ 
 function binaryAgent(str) {
   str = str.split(" ");
   return str.map(function (byte) {
