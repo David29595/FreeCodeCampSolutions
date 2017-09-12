@@ -1,5 +1,5 @@
 var originalBoard;
-const humanPlayer = '0';
+const humanPlayer = 'O';
 const aiPlayer = 'X';
 const winCombos = [
     [0, 1, 2],
