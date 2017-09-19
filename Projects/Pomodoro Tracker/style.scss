@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+
+$green: #99CC00;
+$black: #666666;
+$white: #fff;
+
+$font: Open Sans, Arial;
+  
+* {
+  margin: 0;
+  font-family: $font;
+}
+
+html, body, main {
+    height: 100%;
+    overflow: hidden;
+    background-color: $black;
+    text-align: center;
+}
+
+h1 {
+  display: block;
+  background-color: $black;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-family: 'Pacifico';
+  font-size: 5em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.center-panel {
+    width:500px;
+    height: 300px;
+    background-color: $green;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  color: $white;
+  text-transform: uppercase;
+  padding: 20px;
+  
+  .session {
+    font-size: .8em;
+    display: flex;
+    margin-left: 80px; 
+    .breakCtrl, .sessionCtrl {
+      display: inline;
+      padding-left: 30px;
+      padding-right: 30px;
+      background-color: $black;
+    }
+    .minus, .plus {
+      color: $white;
+      border: none;
+      cursor: pointer;
+      font-size: 2em;
+      outline: none;
+    }
+    
+    .time {
+      font-size: 2.5em;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+section {
+  height: 100%;
+  color: $white;
+  .title {
+    text-align: center;
+    font-size: .8em;
+  }
+  .timer {
+      font-size: 4em;
+      margin-top: 50px;
+      cursor: pointer;
+  }
+}

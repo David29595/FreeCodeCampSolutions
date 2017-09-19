@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+* {
+  margin: 0;
+  font-family: Open Sans, Arial; }
+
+html, body, main {
+  height: 100%;
+  overflow: hidden;
+  background-color: #666666;
+  text-align: center; }
+
+h1 {
+  display: block;
+  background-color: #666666;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-family: 'Pacifico';
+  font-size: 5em; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto; }
+
+.center-panel {
+  width: 500px;
+  height: 300px;
+  background-color: #99CC00;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  text-align: center; }
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px; }
+  header .session {
+    font-size: .8em;
+    display: flex;
+    margin-left: 80px; }
+    header .session .breakCtrl, header .session .sessionCtrl {
+      display: inline;
+      padding-left: 30px;
+      padding-right: 30px;
+      background-color: #666666; }
+    header .session .minus, header .session .plus {
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 2em;
+      outline: none; }
+    header .session .time {
+      font-size: 2.5em;
+      padding-left: 10px;
+      padding-right: 10px; }
+
+section {
+  height: 100%;
+  color: #fff; }
+  section .title {
+    text-align: center;
+    font-size: .8em; }
+  section .timer {
+    font-size: 4em;
+    margin-top: 50px;
+    cursor: pointer; }
