@@ -34,10 +34,6 @@ function updateRecords(id, prop, value) {
     delete collection[id][prop];
   }
   else if (prop === 'tracks' && collection[id][prop]){
-//       if (collection[id][tracks].indexOf(value) == -1) {
-//         collection[id][tracks].push(value);
-//       }
-//         if (!collection[id][tracks]) collection[id][tracks] = [];
        collection[id].tracks.push(value);
     }
     
