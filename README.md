@@ -21,5 +21,6 @@ This repository contains my solutions to the [freeCodeCamp](https://www.freecode
 ### Advanced
 - [ ] JavaScript Calculator
 - [ ] Pomodoro Timer
+- [x] Tic Tac Toe Game
 - [ ] Simon Game
 ToDo: Finish Intermediate and Advanced problems and add tests for each challenge
