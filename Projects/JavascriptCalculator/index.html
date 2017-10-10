@@ -1,0 +1,117 @@
+<html>
+
+<head>
+  <title>FreeCodeCamp JavaScript Calculator</title>
+  <script src='https://unpkg.com/vue'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" class="stylesheet">
+</head>
+
+<body>
+  <div class='container text-center'>
+    <div class="col-md-3 col-md-offset-3 text-center" id='app'>
+      <div class='row'>
+        <input type='text' class='input' v-model='current' readonly><br/>
+        <input type='text' class='input' v-model='result' readonly>
+      </div>
+      <div class='row'>
+        <button class='btn' v-on:click='press'>C</button>
+        <button class='btn' v-on:click='press'>CLS</button>
+        <button class='btn' v-on:click='press'>*</button>
+        <button class='btn' v-on:click='press'>/</button>
+      </div>
+      <div class='row'>
+        <button class='btn' v-on:click='press'>7</button>
+        <button class='btn' v-on:click='press'>8</button>
+        <button class='btn' v-on:click='press'>9</button>
+        <button class='btn' v-on:click='press'>+</button>
+      </div>
+      <div class='row'>
+        <button class='btn' v-on:click='press'>4</button>
+        <button class='btn' v-on:click='press'>5</button>
+        <button class='btn' v-on:click='press'>6</button>
+        <button class='btn' v-on:click='press'>-</button>
+      </div>
+      <div class='row'>
+        <button class='btn' v-on:click='press'>1</button>
+        <button class='btn' v-on:click='press'>2</button>
+        <button class='btn' v-on:click='press'>3</button>
+      </div>
+      <div class='row'>
+        <button class='btn' v-on:click='press'>.</button>
+        <button class='btn' v-on:click='press'>0</button>
+        <button class='btn equal-sign' v-on:click='press'>=</button><br />
+      </div>
+    </div>
+  </div>
+  <script src='https://unpkg.com/vue'></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        current: '',
+        result: 0,
+        actionKeys: ['+', '=', 'CLS', '*', '/', 'C']
+      },
+      methods: {
+        press: function (event) {
+          let key = event.target.innerText;
+          if (!this.actionKeys.includes(key)) {
+            app.current += key;
+          } else if (key === '=') {
+            equals();
+          } else if (key === 'CLS') {
+            clear();
+          } else if (key === '*') {
+            multiply();
+          } else if (key === '/') {
+            divide();
+          } else if (key === '+') {
+            plus();
+          } else if (key === '-') {
+            minus();
+          } else if (key === 'C ') {
+            backspace();
+          }
+        },
+      }
+    });
+
+    function equals() {
+      app.result = eval(app.current)
+    }
+
+    function clear() {
+      app.current = '';
+      app.result = '';
+    }
+
+    function backspace() {
+      app.current = app.current.substring(0, app.current.length - 1);
+    }
+
+    function multiply() {
+      app.current += '*';
+    }
+
+    function divide() {
+      app.current += '/';
+    }
+
+    function plus() {
+      app.current += '+';
+    }
+
+    function minus() {
+      app.current += '-';
+    }
+  </script>
+</body>
+
+</html>
+
+<style>
+  .wrapper {
+    width: 300px;
+    margin: auto;
+  }
+</style>
